@@ -7,6 +7,7 @@ from apps.menu.models import (
     Food
 )
 
+
 class ToppingAdmin(admin.ModelAdmin):
     list_display = (
         'id', 
@@ -33,6 +34,7 @@ class FoodAdmin(admin.ModelAdmin):
         'is_publish', 
         'get_toppings'
     )
+    
     filter_horizontal = ('toppings', )
 
     def get_toppings(self, obj):
