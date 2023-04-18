@@ -1,10 +1,10 @@
 from rest_framework import serializers
+
 from apps.menu.models import (
     Topping,
     Food,
     FoodCategory
 )
-
 
 
 class ToppingSerializer(serializers.ModelSerializer):
@@ -32,9 +32,8 @@ class FoodSerializer(serializers.ModelSerializer):
             'is_vegan',
             'is_publish',
             'toppings'
-            )
+        )
             
-
 
 class FoodCategorySerializer(serializers.ModelSerializer):
     foods = FoodSerializer(many=True)
@@ -45,4 +44,5 @@ class FoodCategorySerializer(serializers.ModelSerializer):
             'name',
             'is_publish',
             'foods'
-            )
+         )
+ 
